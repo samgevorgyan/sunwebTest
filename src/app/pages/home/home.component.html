@@ -1,0 +1,26 @@
+
+<div class="hotel-items">
+
+  <div class="hotel__card" *ngFor="let hotel of pageOfItems ">
+    <div class="hotel_card_title">
+      {{hotel.name}}
+    </div>
+        <img  class="hotel__card_img" [src]="hotel.thumbnail" alt="img">
+    <div class="hotel_card_content">
+      <div class="hotel_card_content_country"> <span>Location</span> - {{hotel.country}}, {{hotel.city}}</div>
+
+      <div class="hotel_card_content_description"> <span>Description</span> - {{hotel.description}}</div>
+      <div class="hotel_card_content_price"> <span>price per night</span> - {{hotel.pricePerNight.formatted}}</div>
+      <div class="hotel_card_content_usp"> <span>Unique Selling Proposition (USP)</span>
+      <div *ngFor="let usp of hotel.usp">
+        {{usp}}
+      </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div class="pagination_div">
+  <jw-pagination  [items]="hotels " (changePage)="onChangePage($event)"></jw-pagination>
+</div>
