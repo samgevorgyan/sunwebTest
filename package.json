@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng deploy --base-href=https://samgevorgyan.github.io/sunwebTest/"
   },
   "private": true,
   "dependencies": {
@@ -17,8 +18,11 @@
     "@angular/core": "~8.2.5",
     "@angular/forms": "~8.2.5",
     "@angular/platform-browser": "~8.2.5",
+
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
+    "angular-cli-ghpages": "^0.6.0",
+    "jw-angular-pagination": "^1.1.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
